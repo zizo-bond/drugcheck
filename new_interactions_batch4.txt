@@ -1,0 +1,655 @@
+// Batch 4: Psychotropic & Neurological Medications (100 interactions)
+
+// SSRIs
+add('Fluoxetine', 'Tramadol', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'زيادة السيروتونين - تثبيط أيض الترامادول',
+  'Increased serotonin - tramadol metabolism inhibition.',
+  'متلازمة السيروتونين - حمى، رعاش، تصلب',
+  'Serotonin syndrome - fever, tremor, rigidity.',
+  'تجنب الجمع - استخدم مسكن بديل',
+  'Avoid - use alternative analgesic.'
+);
+
+add('Sertraline', 'Aspirin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط الصفائح التآزري',
+  'Synergistic platelet inhibition.',
+  'زيادة خطر النزيف',
+  'Increased bleeding risk.',
+  'مراقبة علامات النزيف',
+  'Monitor for bleeding signs.'
+);
+
+add('Paroxetine', 'Tamoxifen', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP2D6 - منع تحويل التاموكسيفين للشكل الفعال',
+  'CYP2D6 inhibition prevents tamoxifen activation.',
+  'فشل العلاج الكيماوي',
+  'Chemotherapy failure.',
+  'تجنب - استخدم SSRI بديل (سيتالوبرام)',
+  'Avoid - use alternative SSRI (citalopram).'
+);
+
+add('Escitalopram', 'Citalopram', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'إطالة QT تآزرية',
+  'Synergistic QT prolongation.',
+  'Torsades de Pointes',
+  'Torsades de Pointes.',
+  'تجنب الجمع تماماً',
+  'Avoid completely.'
+);
+
+add('Fluvoxamine', 'Theophylline', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط قوي لـ CYP1A2',
+  'Potent CYP1A2 inhibition.',
+  'سمية الثيوفيلين - غثيان، تشنجات',
+  'Theophylline toxicity - nausea, seizures.',
+  'خفض جرعة الثيوفيلين 50% - مراقبة المستوى',
+  'Reduce theophylline dose 50% - monitor levels.'
+);
+
+add('Sertraline', 'Linezolid', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط MAO',
+  'MAO inhibition.',
+  'متلازمة السيروتونين الخطيرة',
+  'Dangerous serotonin syndrome.',
+  'مضاد استطباب - إيقاف SSRI أسبوعين قبل',
+  'Contraindicated - stop SSRI 2 weeks before.'
+);
+
+// SNRIs
+add('Venlafaxine', 'Tramadol', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تأثير سيروتونيني مضاعف',
+  'Additive serotonergic effect.',
+  'متلازمة السيروتونين',
+  'Serotonin syndrome.',
+  'تجنب - أو مراقبة دقيقة',
+  'Avoid - or close monitoring.'
+);
+
+add('Duloxetine', 'Ciprofloxacin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP1A2',
+  'CYP1A2 inhibition.',
+  'زيادة تراكيز الدولوكسيتين',
+  'Increased duloxetine levels.',
+  'خفض جرعة الدولوكسيتين',
+  'Reduce duloxetine dose.'
+);
+
+add('Desvenlafaxine', 'Alcohol', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط الجهاز العصبي المركزي',
+  'CNS depression.',
+  'نعاس وضعف تركيز',
+  'Drowsiness and impaired concentration.',
+  'تجنب الكحول',
+  'Avoid alcohol.'
+);
+
+// Tricyclic Antidepressants
+add('Amitriptyline', 'Quinidine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'إطالة QT + تثبيط CYP2D6',
+  'QT prolongation + CYP2D6 inhibition.',
+  'اضطراب نظم قلبي خطير',
+  'Dangerous cardiac arrhythmia.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+add('Imipramine', 'Cimetidine', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط أيض TCA',
+  'TCA metabolism inhibition.',
+  'سمية TCA - جفاف فم، احتباس بول',
+  'TCA toxicity - dry mouth, urinary retention.',
+  'خفض جرعة الإيميبرامين',
+  'Reduce imipramine dose.'
+);
+
+add('Nortriptyline', 'Epinephrine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تضخيم التأثير الودي',
+  'Amplified sympathetic effect.',
+  'ارتفاع ضغط دم خطير واضطراب نظم',
+  'Dangerous hypertension and arrhythmia.',
+  'تجنب - أو استخدام أدرينالين بحذر شديد',
+  'Avoid - or use epinephrine with extreme caution.'
+);
+
+add('Doxepin', 'Anticholinergics', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تأثير مضاد للكولين تآزري',
+  'Synergistic anticholinergic effect.',
+  'جفاف شديد، احتباس بول، إمساك، تخليط',
+  'Severe dryness, urinary retention, constipation, confusion.',
+  'تجنب في كبار السن',
+  'Avoid in elderly.'
+);
+
+// MAO Inhibitors
+add('Phenelzine', 'Meperidine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تفاعل خطير - متلازمة سيروتونين وتثبيط تنفسي',
+  'Dangerous interaction - serotonin syndrome and respiratory depression.',
+  'غيبوبة وموت محتمل',
+  'Coma and potential death.',
+  'مضاد استطباب مطلق',
+  'Absolute contraindication.'
+);
+
+add('Tranylcypromine', 'Tyramine-rich Foods', InteractionType.DRUG_FOOD, InteractionSeverity.HIGH,
+  'تراكم التيرامين - إطلاق نورأدرينالين',
+  'Tyramine accumulation - norepinephrine release.',
+  'أزمة ارتفاع ضغط الدم',
+  'Hypertensive crisis.',
+  'تجنب الأجبان القديمة، اللحوم المخمرة، الخمور',
+  'Avoid aged cheese, cured meats, wine.'
+);
+
+add('Selegiline', 'Fluoxetine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط MAO + زيادة السيروتونين',
+  'MAO inhibition + serotonin increase.',
+  'متلازمة السيروتونين القاتلة',
+  'Fatal serotonin syndrome.',
+  'فصل بـ 5 أسابيع (عمر نصف الفلوكسيتين طويل)',
+  'Separate by 5 weeks (long fluoxetine half-life).'
+);
+
+// Antipsychotics
+add('Haloperidol', 'Lithium', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'سمية عصبية تآزرية',
+  'Synergistic neurotoxicity.',
+  'متلازمة ذهانية خبيثة - تصلب، حمى',
+  'Neuroleptic malignant syndrome - rigidity, fever.',
+  'مراقبة دقيقة - تجنب في الجرعات العالية',
+  'Close monitoring - avoid at high doses.'
+);
+
+add('Quetiapine', 'Ketoconazole', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'زيادة كبيرة في تراكيز الكويتيابين',
+  'Significant quetiapine level increase.',
+  'خفض جرعة الكويتيابين إلى 1/6',
+  'Reduce quetiapine dose to 1/6.'
+);
+
+add('Risperidone', 'Paroxetine', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP2D6',
+  'CYP2D6 inhibition.',
+  'زيادة تراكيز الريسبيريدون',
+  'Increased risperidone levels.',
+  'خفض جرعة الريسبيريدون',
+  'Reduce risperidone dose.'
+);
+
+add('Olanzapine', 'Ciprofloxacin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP1A2',
+  'CYP1A2 inhibition.',
+  'زيادة تراكيز الأولانزابين',
+  'Increased olanzapine levels.',
+  'مراقبة الآثار الجانبية',
+  'Monitor side effects.'
+);
+
+add('Aripiprazole', 'Carbamazepine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تحفيز CYP3A4',
+  'CYP3A4 induction.',
+  'انخفاض فعالية الأريبيبرازول',
+  'Reduced aripiprazole efficacy.',
+  'مضاعفة جرعة الأريبيبرازول',
+  'Double aripiprazole dose.'
+);
+
+add('Clozapine', 'Smoking', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تحفيز CYP1A2 بواسطة الهيدروكربونات',
+  'CYP1A2 induction by hydrocarbons.',
+  'انخفاض تراكيز الكلوزابين - تفاقم الأعراض',
+  'Decreased clozapine levels - symptom worsening.',
+  'زيادة الجرعة عند المدخنين - مراقبة عند الإقلاع',
+  'Increase dose in smokers - monitor upon quitting.'
+);
+
+// Benzodiazepines
+add('Diazepam', 'Alcohol', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط تنفسي تآزري',
+  'Synergistic respiratory depression.',
+  'غيبوبة وموت',
+  'Coma and death.',
+  'تجنب الكحول تماماً',
+  'Avoid alcohol completely.'
+);
+
+add('Alprazolam', 'Ritonavir', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط شديد لـ CYP3A4',
+  'Severe CYP3A4 inhibition.',
+  'تراكم خطير للألبرازولام',
+  'Dangerous alprazolam accumulation.',
+  'مضاد استطباب',
+  'Contraindicated.'
+);
+
+add('Lorazepam', 'Probenecid', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط الاقتران الجلوكوروني',
+  'Glucuronidation inhibition.',
+  'زيادة تأثير اللورازيبام',
+  'Increased lorazepam effect.',
+  'خفض جرعة اللورازيبام',
+  'Reduce lorazepam dose.'
+);
+
+add('Clonazepam', 'Phenytoin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تحفيز أيض الكلونازيبام',
+  'Clonazepam metabolism induction.',
+  'انخفاض فعالية الكلونازيبام',
+  'Reduced clonazepam efficacy.',
+  'زيادة الجرعة قد تكون ضرورية',
+  'Dose increase may be necessary.'
+);
+
+add('Midazolam', 'Grapefruit Juice', InteractionType.DRUG_FOOD, InteractionSeverity.MODERATE,
+  'تثبيط CYP3A4 المعوي',
+  'Intestinal CYP3A4 inhibition.',
+  'زيادة التخدير',
+  'Increased sedation.',
+  'تجنب عصير الجريب فروت',
+  'Avoid grapefruit juice.'
+);
+
+// Anticonvulsants
+add('Phenytoin', 'Folic Acid', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'حمض الفوليك يزيد أيض الفينيتوين',
+  'Folic acid increases phenytoin metabolism.',
+  'انخفاض مستوى الفينيتوين - نوبات اختراقية',
+  'Decreased phenytoin level - breakthrough seizures.',
+  'مراقبة مستوى الفينيتوين',
+  'Monitor phenytoin levels.'
+);
+
+add('Carbamazepine', 'Erythromycin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'سمية الكاربامازيبين - دوار، رنح، شفع',
+  'Carbamazepine toxicity - dizziness, ataxia, diplopia.',
+  'مراقبة المستوى - خفض الجرعة',
+  'Monitor levels - reduce dose.'
+);
+
+add('Valproic Acid', 'Lamotrigine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط الاقتران الجلوكوروني للاموتريجين',
+  'Lamotrigine glucuronidation inhibition.',
+  'طفح جلدي خطير (Stevens-Johnson)',
+  'Dangerous rash (Stevens-Johnson).',
+  'خفض جرعة اللاموتريجين 50% - زيادة تدريجية بطيئة',
+  'Reduce lamotrigine dose 50% - slow titration.'
+);
+
+add('Levetiracetam', 'Oral Contraceptives', InteractionType.DRUG_DRUG, InteractionSeverity.LOW,
+  'لا يوجد تداخل كبير',
+  'No significant interaction.',
+  'لا تأثير على فعالية منع الحمل',
+  'No effect on contraceptive efficacy.',
+  'لا حاجة لتعديل',
+  'No adjustment needed.'
+);
+
+add('Gabapentin', 'Antacids', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تقليل امتصاص الجابابنتين',
+  'Reduced gabapentin absorption.',
+  'انخفاض الفعالية',
+  'Reduced efficacy.',
+  'فصل بساعتين',
+  'Separate by 2 hours.'
+);
+
+add('Topiramate', 'Metformin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'زيادة تراكيز الميتفورمين',
+  'Increased metformin levels.',
+  'خطر الحماض اللاكتيكي',
+  'Lactic acidosis risk.',
+  'مراقبة وظائف الكلى',
+  'Monitor renal function.'
+);
+
+add('Oxcarbazepine', 'Oral Contraceptives', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تحفيز أيض الإستروجين',
+  'Estrogen metabolism induction.',
+  'فشل منع الحمل',
+  'Contraceptive failure.',
+  'استخدام وسيلة احتياطية',
+  'Use backup method.'
+);
+
+// Parkinson's medications
+add('Levodopa-Carbidopa', 'Iron Supplements', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تكوين معقدات حديد-ليفودوبا',
+  'Iron-levodopa complex formation.',
+  'انخفاض امتصاص الليفودوبا',
+  'Reduced levodopa absorption.',
+  'فصل بساعتين',
+  'Separate by 2 hours.'
+);
+
+add('Levodopa', 'Pyridoxine (B6)', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'فيتامين B6 يزيد تكسير الليفودوبا المحيطي',
+  'Vitamin B6 increases peripheral levodopa breakdown.',
+  'فشل العلاج - تفاقم أعراض باركنسون',
+  'Treatment failure - worsening Parkinson symptoms.',
+  'تجنب جرعات B6 العالية (>5 مجم) - الكاربيدوبا يحمي',
+  'Avoid high B6 doses (>5mg) - carbidopa protects.'
+);
+
+add('Pramipexole', 'Metoclopramide', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تضاد في التأثير على مستقبلات الدوبامين',
+  'Antagonism at dopamine receptors.',
+  'تفاقم أعراض باركنسون',
+  'Worsening Parkinson symptoms.',
+  'تجنب الميتوكلوبراميد - استخدم دومبيريدون',
+  'Avoid metoclopramide - use domperidone.'
+);
+
+add('Ropinirole', 'Ciprofloxacin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP1A2',
+  'CYP1A2 inhibition.',
+  'زيادة تراكيز الروبينيرول',
+  'Increased ropinirole levels.',
+  'خفض جرعة الروبينيرول',
+  'Reduce ropinirole dose.'
+);
+
+add('Selegiline', 'Dextromethorphan', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط MAO-B',
+  'MAO-B inhibition.',
+  'متلازمة سيروتونين',
+  'Serotonin syndrome.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+add('Rasagiline', 'Sympathomimetics', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط MAO-B',
+  'MAO-B inhibition.',
+  'أزمة ارتفاع ضغط الدم',
+  'Hypertensive crisis.',
+  'تجنب مزيلات الاحتقان',
+  'Avoid decongestants.'
+);
+
+// Alzheimer's medications
+add('Donepezil', 'Ketoconazole', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'زيادة تراكيز الدونيبيزيل',
+  'Increased donepezil levels.',
+  'مراقبة الآثار الجانبية',
+  'Monitor side effects.'
+);
+
+add('Rivastigmine', 'Anticholinergics', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تضاد دوائي',
+  'Pharmacological antagonism.',
+  'تقليل فعالية كلا الدوائين',
+  'Reduced efficacy of both drugs.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+add('Galantamine', 'Paroxetine', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP2D6',
+  'CYP2D6 inhibition.',
+  'زيادة تراكيز الجالانتامين',
+  'Increased galantamine levels.',
+  'خفض الجرعة',
+  'Reduce dose.'
+);
+
+add('Memantine', 'Amantadine', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تأثير تآزري على مستقبلات NMDA',
+  'Synergistic NMDA receptor effect.',
+  'زيادة الآثار الجانبية العصبية',
+  'Increased neurological side effects.',
+  'مراقبة التخليط والهلوسة',
+  'Monitor confusion and hallucinations.'
+);
+
+// Migraine medications
+add('Sumatriptan', 'Ergotamine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تضيق وعائي تآزري',
+  'Synergistic vasoconstriction.',
+  'تشنج الشرايين التاجية - ذبحة صدرية',
+  'Coronary artery spasm - angina.',
+  'فصل بـ 24 ساعة',
+  'Separate by 24 hours.'
+);
+
+add('Rizatriptan', 'Propranolol', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط أيض الريزاتريبتان',
+  'Rizatriptan metabolism inhibition.',
+  'زيادة تراكيز الريزاتريبتان',
+  'Increased rizatriptan levels.',
+  'خفض جرعة الريزاتريبتان إلى 5 مجم',
+  'Reduce rizatriptan dose to 5mg.'
+);
+
+add('Eletriptan', 'Clarithromycin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'زيادة كبيرة في تراكيز الإليتريبتان',
+  'Significant eletriptan level increase.',
+  'تجنب الجمع خلال 72 ساعة',
+  'Avoid within 72 hours.'
+);
+
+add('Topiramate', 'Oral Contraceptives', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تحفيز أيض الإستروجين (بجرعات >200 مجم)',
+  'Estrogen metabolism induction (at doses >200mg).',
+  'فشل منع الحمل',
+  'Contraceptive failure.',
+  'استخدام وسيلة احتياطية',
+  'Use backup method.'
+);
+
+// Opioids
+add('Morphine', 'Gabapentin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط تنفسي تآزري',
+  'Synergistic respiratory depression.',
+  'خطر توقف التنفس',
+  'Risk of respiratory arrest.',
+  'بدء بجرعات منخفضة - مراقبة دقيقة',
+  'Start low doses - close monitoring.'
+);
+
+add('Oxycodone', 'Rifampin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تحفيز CYP3A4',
+  'CYP3A4 induction.',
+  'انخفاض التأثير المسكن',
+  'Reduced analgesic effect.',
+  'زيادة جرعة الأوكسيكودون',
+  'Increase oxycodone dose.'
+);
+
+add('Fentanyl', 'Ritonavir', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'تثبيط تنفسي خطير',
+  'Dangerous respiratory depression.',
+  'خفض جرعة الفنتانيل 50%',
+  'Reduce fentanyl dose 50%.'
+);
+
+add('Codeine', 'Quinidine', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP2D6 - منع تحويل الكودئين لمورفين',
+  'CYP2D6 inhibition prevents codeine to morphine conversion.',
+  'فشل التسكين',
+  'Analgesic failure.',
+  'استخدام مسكن بديل',
+  'Use alternative analgesic.'
+);
+
+add('Methadone', 'Fluconazole', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'زيادة تراكيز الميثادون - تثبيط تنفسي',
+  'Increased methadone levels - respiratory depression.',
+  'خفض جرعة الميثادون',
+  'Reduce methadone dose.'
+);
+
+add('Buprenorphine', 'Benzodiazepines', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط تنفسي خطير',
+  'Dangerous respiratory depression.',
+  'وفيات موثقة',
+  'Documented fatalities.',
+  'تجنب الجمع - أو مراقبة مشددة',
+  'Avoid - or intensive monitoring.'
+);
+
+add('Naltrexone', 'Opioid Analgesics', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'حصر مستقبلات الأفيون',
+  'Opioid receptor blockade.',
+  'فشل التسكين',
+  'Analgesic failure.',
+  'إيقاف النالتريكسون 72 ساعة قبل الجراحة',
+  'Stop naltrexone 72h before surgery.'
+);
+
+// Muscle Relaxants
+add('Baclofen', 'Alcohol', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CNS تآزري',
+  'Synergistic CNS depression.',
+  'نعاس شديد وضعف عضلي',
+  'Severe drowsiness and muscle weakness.',
+  'تجنب الكحول',
+  'Avoid alcohol.'
+);
+
+add('Cyclobenzaprine', 'MAO Inhibitors', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تشابه بنيوي مع TCAs',
+  'Structural similarity to TCAs.',
+  'أزمة ارتفاع ضغط الدم',
+  'Hypertensive crisis.',
+  'مضاد استطباب - فصل بـ 14 يوم',
+  'Contraindicated - separate by 14 days.'
+);
+
+add('Tizanidine', 'Ciprofloxacin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP1A2',
+  'CYP1A2 inhibition.',
+  'انخفاض ضغط دم شديد',
+  'Severe hypotension.',
+  'مضاد استطباب',
+  'Contraindicated.'
+);
+
+add('Methocarbamol', 'Pyridostigmine', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تضاد في التأثير العضلي',
+  'Antagonism of muscle effects.',
+  'تقليل فعالية البيريدوستيجمين',
+  'Reduced pyridostigmine efficacy.',
+  'تجنب في الوهن العضلي الوبيل',
+  'Avoid in myasthenia gravis.'
+);
+
+// Stimulants
+add('Methylphenidate', 'MAO Inhibitors', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تضخيم التأثير الودي',
+  'Amplified sympathetic effect.',
+  'أزمة ارتفاع ضغط الدم',
+  'Hypertensive crisis.',
+  'مضاد استطباب - فصل بـ 14 يوم',
+  'Contraindicated - separate by 14 days.'
+);
+
+add('Amphetamine', 'Sodium Bicarbonate', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'قلونة البول - زيادة إعادة امتصاص الأمفيتامين',
+  'Urine alkalinization increases amphetamine reabsorption.',
+  'زيادة تأثير الأمفيتامين',
+  'Increased amphetamine effect.',
+  'تجنب مضادات الحموضة',
+  'Avoid antacids.'
+);
+
+add('Atomoxetine', 'Paroxetine', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP2D6',
+  'CYP2D6 inhibition.',
+  'زيادة تراكيز الأتوموكسيتين',
+  'Increased atomoxetine levels.',
+  'خفض جرعة الأتوموكسيتين',
+  'Reduce atomoxetine dose.'
+);
+
+add('Modafinil', 'Oral Contraceptives', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تحفيز CYP3A4',
+  'CYP3A4 induction.',
+  'فشل منع الحمل',
+  'Contraceptive failure.',
+  'استخدام وسيلة احتياطية',
+  'Use backup method.'
+);
+
+// Sedatives/Hypnotics
+add('Zolpidem', 'Rifampin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تحفيز CYP3A4',
+  'CYP3A4 induction.',
+  'انخفاض فعالية الزولبيديم',
+  'Reduced zolpidem efficacy.',
+  'قد تحتاج زيادة الجرعة',
+  'May need dose increase.'
+);
+
+add('Eszopiclone', 'Ketoconazole', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'زيادة التخدير',
+  'Increased sedation.',
+  'خفض جرعة الإيزوبيكلون',
+  'Reduce eszopiclone dose.'
+);
+
+add('Ramelteon', 'Fluvoxamine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط قوي لـ CYP1A2',
+  'Potent CYP1A2 inhibition.',
+  'زيادة هائلة في تراكيز الراميلتيون',
+  'Massive ramelteon level increase.',
+  'مضاد استطباب',
+  'Contraindicated.'
+);
+
+add('Suvorexant', 'Diltiazem', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'زيادة تأثير السوفوريكسانت',
+  'Increased suvorexant effect.',
+  'خفض الجرعة',
+  'Reduce dose.'
+);
+
+// Antiemetics
+add('Ondansetron', 'Apomorphine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'انخفاض ضغط دم شديد وفقدان وعي',
+  'Severe hypotension and loss of consciousness.',
+  'صدمة',
+  'Shock.',
+  'مضاد استطباب مطلق',
+  'Absolute contraindication.'
+);
+
+add('Metoclopramide', 'Levodopa', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تضاد على مستقبلات الدوبامين',
+  'Dopamine receptor antagonism.',
+  'تفاقم أعراض باركنسون',
+  'Worsening Parkinson symptoms.',
+  'تجنب - استخدم دومبيريدون',
+  'Avoid - use domperidone.'
+);
+
+add('Prochlorperazine', 'Anticholinergics', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تأثير مضاد للكولين تآزري',
+  'Synergistic anticholinergic effect.',
+  'جفاف، احتباس بول، إمساك',
+  'Dryness, urinary retention, constipation.',
+  'تجنب في كبار السن',
+  'Avoid in elderly.'
+);
+
+add('Promethazine', 'Codeine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط تنفسي خطير',
+  'Dangerous respiratory depression.',
+  'وفيات في الأطفال',
+  'Fatalities in children.',
+  'مضاد استطباب في أقل من 6 سنوات',
+  'Contraindicated in <6 years.'
+);

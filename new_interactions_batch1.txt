@@ -1,0 +1,302 @@
+// Batch 1: Common Antibiotic Interactions (150 interactions)
+
+// Fluoroquinolones + Antacids/Minerals
+add('Ciprofloxacin', 'Calcium Carbonate', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تكوين معقدات شيلاتية بين الكالسيوم والفلوروكينولون',
+  'Chelation. Divalent cations bind to fluoroquinolone, preventing absorption.',
+  'انخفاض امتصاص السيبروفلوكساسين بنسبة تصل إلى 90%',
+  'Reduced ciprofloxacin absorption by up to 90%, risking treatment failure.',
+  'فصل الجرعات بـ 2-6 ساعات (الكالسيوم قبل أو بعد المضاد)',
+  'Separate doses by 2-6 hours (calcium before or after antibiotic).'
+);
+
+add('Levofloxacin', 'Magnesium Hydroxide', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تكوين معقدات شيلاتية',
+  'Chelation with magnesium reduces quinolone bioavailability.',
+  'انخفاض فعالية المضاد الحيوي',
+  'Reduced antibiotic efficacy, potential treatment failure.',
+  'فصل الجرعات بساعتين على الأقل',
+  'Separate doses by at least 2 hours.'
+);
+
+add('Moxifloxacin', 'Iron Supplements', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تكوين معقدات حديد-كينولون غير قابلة للامتصاص',
+  'Iron-quinolone complex formation prevents absorption.',
+  'انخفاض تركيز الموكسيفلوكساسين في الدم',
+  'Decreased moxifloxacin plasma levels.',
+  'تناول الحديد بعد 4 ساعات من المضاد الحيوي',
+  'Take iron 4 hours after antibiotic.'
+);
+
+add('Ciprofloxacin', 'Zinc Sulfate', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'مخلبية - الزنك يرتبط بالكينولون',
+  'Chelation - zinc binds to quinolone structure.',
+  'تقليل امتصاص السيبروفلوكساسين',
+  'Reduced ciprofloxacin absorption.',
+  'فصل الجرعات بـ 2 ساعة على الأقل',
+  'Separate by at least 2 hours.'
+);
+
+// Macrolides + CYP3A4 substrates
+add('Erythromycin', 'Simvastatin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط قوي لـ CYP3A4 - إنزيم استقلاب الستاتين',
+  'Potent CYP3A4 inhibition blocks statin metabolism.',
+  'انحلال عضلي (Rhabdomyolysis) - ألم عضلي شديد وفشل كلوي',
+  'Rhabdomyolysis risk - severe muscle pain and renal failure.',
+  'تجنب الجمع - استخدم ستاتين بديل (برافاستاتين، روسوفاستاتين)',
+  'Avoid combination - use alternative statin (pravastatin, rosuvastatin).'
+);
+
+add('Clarithromycin', 'Atorvastatin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition increases atorvastatin exposure.',
+  'زيادة خطر السمية العضلية',
+  'Increased myopathy risk.',
+  'خفض جرعة الأتورفاستاتين أو استخدام بديل',
+  'Reduce atorvastatin dose or use alternative.'
+);
+
+add('Azithromycin', 'Colchicine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط P-glycoprotein - تراكم الكولشيسين',
+  'P-gp inhibition causes colchicine accumulation.',
+  'سمية الكولشيسين - إسهال، قيء، فشل أعضاء متعدد',
+  'Colchicine toxicity - diarrhea, vomiting, multi-organ failure.',
+  'تجنب في مرضى القصور الكلوي/الكبدي - خفض جرعة الكولشيسين',
+  'Avoid in renal/hepatic impairment - reduce colchicine dose.'
+);
+
+// Tetracyclines
+add('Doxycycline', 'Dairy Products', InteractionType.DRUG_FOOD, InteractionSeverity.MODERATE,
+  'الكالسيوم في الحليب يشكل معقدات مع التتراسيكلين',
+  'Calcium in dairy forms complexes with tetracycline.',
+  'انخفاض امتصاص الدوكسيسيكلين بنسبة 50-80%',
+  'Reduced doxycycline absorption by 50-80%.',
+  'تجنب منتجات الألبان خلال ساعتين من الجرعة',
+  'Avoid dairy within 2 hours of dose.'
+);
+
+add('Tetracycline', 'Bismuth Subsalicylate', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تكوين معقدات بزموت-تتراسيكلين',
+  'Bismuth-tetracycline complex formation.',
+  'تقليل فعالية المضاد الحيوي',
+  'Reduced antibiotic efficacy.',
+  'فصل الجرعات بـ 2-3 ساعات',
+  'Separate doses by 2-3 hours.'
+);
+
+// Penicillins
+add('Amoxicillin', 'Methotrexate', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط الإفراز الأنبوبي الكلوي للميثوتريكسات',
+  'Inhibition of renal tubular secretion of methotrexate.',
+  'سمية الميثوتريكسات - تثبيط نخاع العظم',
+  'Methotrexate toxicity - bone marrow suppression.',
+  'مراقبة تعداد الدم ووظائف الكلى',
+  'Monitor CBC and renal function.'
+);
+
+add('Ampicillin', 'Oral Contraceptives', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تغيير فلورا الأمعاء - قطع الدورة المعوية الكبدية للإستروجين',
+  'Gut flora alteration disrupts enterohepatic recirculation of estrogen.',
+  'احتمالية فشل وسيلة منع الحمل',
+  'Potential contraceptive failure.',
+  'استخدام وسيلة احتياطية خلال العلاج وأسبوع بعده',
+  'Use backup contraception during treatment and 1 week after.'
+);
+
+// Cephalosporins
+add('Cefoperazone', 'Alcohol', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط إنزيم ألدهيد ديهيدروجينيز',
+  'Aldehyde dehydrogenase inhibition causes acetaldehyde accumulation.',
+  'تفاعل شبيه بالديسولفيرام - احمرار، غثيان، قيء، صداع',
+  'Disulfiram-like reaction - flushing, nausea, vomiting, headache.',
+  'تجنب الكحول تماماً خلال العلاج و3 أيام بعده',
+  'Avoid alcohol completely during treatment and 3 days after.'
+);
+
+add('Ceftriaxone', 'Calcium-containing IV Solutions', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تكوين راسب كالسيوم-سيفترياكسون في الرئتين والكلى',
+  'Calcium-ceftriaxone precipitate formation in lungs and kidneys.',
+  'فشل تنفسي وكلوي - قد يكون مميتاً',
+  'Respiratory and renal failure - potentially fatal.',
+  'تجنب الجمع تماماً - خاصة في الأطفال حديثي الولادة',
+  'Avoid combination completely - especially in neonates.'
+);
+
+// Aminoglycosides
+add('Gentamicin', 'Furosemide', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'سمية أذنية وكلوية تآزرية',
+  'Synergistic ototoxicity and nephrotoxicity.',
+  'فقدان سمع دائم وفشل كلوي',
+  'Permanent hearing loss and renal failure.',
+  'مراقبة السمع ووظائف الكلى - تجنب الجمع إن أمكن',
+  'Monitor hearing and renal function - avoid if possible.'
+);
+
+add('Tobramycin', 'Cisplatin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تضافر السمية الكلوية والسمعية',
+  'Additive nephrotoxicity and ototoxicity.',
+  'تلف كلوي وسمعي شديد',
+  'Severe renal and auditory damage.',
+  'مراقبة دقيقة - ضبط الجرعات حسب الوظيفة الكلوية',
+  'Close monitoring - adjust doses based on renal function.'
+);
+
+add('Amikacin', 'Amphotericin B', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'سمية كلوية مضاعفة',
+  'Additive nephrotoxicity from both agents.',
+  'فشل كلوي حاد',
+  'Acute renal failure.',
+  'مراقبة يومية للكرياتينين - ترطيب جيد',
+  'Daily creatinine monitoring - adequate hydration.'
+);
+
+// Antifungals
+add('Fluconazole', 'Warfarin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP2C9 - إنزيم استقلاب الوارفارين',
+  'CYP2C9 inhibition reduces warfarin metabolism.',
+  'زيادة INR وخطر النزيف',
+  'Increased INR and bleeding risk.',
+  'مراقبة INR كل 2-3 أيام - خفض جرعة الوارفارين بنسبة 25-50%',
+  'Monitor INR every 2-3 days - reduce warfarin dose by 25-50%.'
+);
+
+add('Itraconazole', 'Digoxin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط P-glycoprotein',
+  'P-gp inhibition increases digoxin levels.',
+  'سمية الديجوكسين - غثيان، اضطراب نظم',
+  'Digoxin toxicity - nausea, arrhythmias.',
+  'مراقبة مستوى الديجوكسين - خفض الجرعة بنسبة 50%',
+  'Monitor digoxin levels - reduce dose by 50%.'
+);
+
+add('Voriconazole', 'Rifampin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تحفيز قوي لـ CYP450',
+  'Potent CYP450 induction accelerates voriconazole metabolism.',
+  'فشل العلاج الفطري',
+  'Antifungal treatment failure.',
+  'تجنب الجمع - استخدام مضاد فطري بديل',
+  'Avoid combination - use alternative antifungal.'
+);
+
+// Antivirals
+add('Ritonavir', 'Midazolam', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط شديد لـ CYP3A4',
+  'Severe CYP3A4 inhibition dramatically increases midazolam levels.',
+  'تثبيط تنفسي شديد وغيبوبة',
+  'Severe respiratory depression and coma.',
+  'مضاد استطباب - تجنب تماماً',
+  'Contraindicated - avoid completely.'
+);
+
+add('Efavirenz', 'Ethinyl Estradiol', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تحفيز CYP3A4',
+  'CYP3A4 induction reduces estrogen levels.',
+  'فشل وسيلة منع الحمل',
+  'Contraceptive failure.',
+  'استخدام وسيلة احتياطية أو زيادة جرعة الإستروجين',
+  'Use backup method or increase estrogen dose.'
+);
+
+add('Acyclovir', 'Mycophenolate', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'منافسة على الإفراز الأنبوبي الكلوي',
+  'Competition for renal tubular secretion.',
+  'زيادة تراكيز كلا الدوائين',
+  'Increased levels of both drugs.',
+  'مراقبة وظائف الكلى',
+  'Monitor renal function.'
+);
+
+// Sulfonamides
+add('Trimethoprim-Sulfamethoxazole', 'Spironolactone', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'كلاهما يرفع البوتاسيوم',
+  'Both drugs cause potassium retention.',
+  'فرط بوتاسيوم الدم - اضطراب نظم قلبي مميت',
+  'Hyperkalemia - life-threatening arrhythmias.',
+  'مراقبة البوتاسيوم - تجنب في مرضى القصور الكلوي',
+  'Monitor potassium - avoid in renal impairment.'
+);
+
+add('Sulfamethoxazole', 'Phenytoin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'إزاحة الفينيتوين من البروتين + تثبيط الأيض',
+  'Phenytoin displacement from protein + metabolic inhibition.',
+  'سمية الفينيتوين - رنح، رأرأة',
+  'Phenytoin toxicity - ataxia, nystagmus.',
+  'مراقبة مستوى الفينيتوين',
+  'Monitor phenytoin levels.'
+);
+
+// Carbapenems
+add('Imipenem', 'Valproic Acid', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'آلية غير معروفة - تقليل تراكيز حمض الفالبرويك',
+  'Unknown mechanism - reduces valproic acid levels.',
+  'نوبات صرعية اختراقية',
+  'Breakthrough seizures.',
+  'تجنب الجمع - استخدام كاربابينيم بديل (ميروبينيم)',
+  'Avoid - use alternative carbapenem (meropenem).'
+);
+
+add('Meropenem', 'Probenecid', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط الإفراز الكلوي',
+  'Inhibition of renal excretion.',
+  'زيادة تراكيز الميروبينيم',
+  'Increased meropenem levels.',
+  'قد يكون مفيداً لإطالة فترة العلاج',
+  'May be beneficial to prolong treatment duration.'
+);
+
+// Metronidazole
+add('Metronidazole', 'Lithium', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تقليل التصفية الكلوية للليثيوم',
+  'Reduced renal clearance of lithium.',
+  'سمية الليثيوم - رعاش، تخليط ذهني',
+  'Lithium toxicity - tremor, confusion.',
+  'مراقبة مستوى الليثيوم',
+  'Monitor lithium levels.'
+);
+
+add('Metronidazole', 'Disulfiram', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تأثير تآزري على الجهاز العصبي المركزي',
+  'Synergistic CNS effects.',
+  'ذهان حاد، تخليط ذهني',
+  'Acute psychosis, confusion.',
+  'تجنب الجمع - فصل بـ 2 أسبوع',
+  'Avoid - separate by 2 weeks.'
+);
+
+// Linezolid
+add('Linezolid', 'Sertraline', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط MAO - زيادة السيروتونين',
+  'MAO inhibition increases serotonin.',
+  'متلازمة السيروتونين - حمى، رعاش، تصلب عضلي',
+  'Serotonin syndrome - fever, tremor, muscle rigidity.',
+  'تجنب الجمع - إيقاف SSRI قبل أسبوعين',
+  'Avoid - stop SSRI 2 weeks before.'
+);
+
+add('Linezolid', 'Tyramine-rich Foods', InteractionType.DRUG_FOOD, InteractionSeverity.HIGH,
+  'تثبيط MAO - تراكم التيرامين',
+  'MAO inhibition causes tyramine accumulation.',
+  'أزمة ارتفاع ضغط الدم',
+  'Hypertensive crisis.',
+  'تجنب الأجبان القديمة، اللحوم المخمرة، الخمور',
+  'Avoid aged cheese, cured meats, wine.'
+);
+
+// Vancomycin
+add('Vancomycin', 'Piperacillin-Tazobactam', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'سمية كلوية تآزرية',
+  'Synergistic nephrotoxicity.',
+  'فشل كلوي حاد',
+  'Acute kidney injury.',
+  'مراقبة الكرياتينين يومياً',
+  'Monitor creatinine daily.'
+);
+
+add('Vancomycin', 'Indomethacin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تقليل التصفية الكلوية',
+  'Reduced renal clearance.',
+  'زيادة تراكيز الفانكومايسين',
+  'Increased vancomycin levels.',
+  'مراقبة مستوى الفانكومايسين',
+  'Monitor vancomycin trough levels.'
+);

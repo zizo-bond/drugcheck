@@ -1,0 +1,184 @@
+// Completing Batch 1 to reach 100 interactions (20 more)
+
+// Antidiabetic Drugs
+add('Metformin', 'Iodinated Contrast', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'خطر الحماض اللاكتيكي في حال حدوث قصور كلوي حاد',
+  'Risk of lactic acidosis if acute renal failure occurs.',
+  'حماض لاكتيكي - قد يكون مميتاً',
+  'Lactic acidosis - potentially fatal.',
+  'إيقاف الميتفورمين 48 ساعة قبل وبعد الصبغة - التأكد من وظائف الكلى',
+  'Stop metformin 48h before and after contrast - verify renal function.'
+);
+
+add('Insulin', 'Beta-blockers', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'حجب أعراض نقص السكر (الرجفة، التعرق، تسرع القلب)',
+  'Masking hypoglycemia symptoms (tremor, sweating, tachycardia).',
+  'نقص سكر صامت - خطر على المريض',
+  'Silent hypoglycemia - patient danger.',
+  'تثقيف المريض - الاعتماد على أعراض أخرى (جوع، تعب)',
+  'Patient education - rely on other symptoms (hunger, fatigue).'
+);
+
+add('Glyburide', 'Fluconazole', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP2C9 - زيادة تراكيز السلفونيل يوريا',
+  'CYP2C9 inhibition increases sulfonylurea levels.',
+  'نقص سكر الدم الشديد',
+  'Severe hypoglycemia.',
+  'مراقبة السكر كل 4-6 ساعات - خفض جرعة الجليبيوريد',
+  'Monitor glucose every 4-6h - reduce glyburide dose.'
+);
+
+add('Glipizide', 'Clarithromycin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط أيض السلفونيل يوريا',
+  'Sulfonylurea metabolism inhibition.',
+  'نقص سكر خطير',
+  'Dangerous hypoglycemia.',
+  'مراقبة دقيقة للسكر',
+  'Close glucose monitoring.'
+);
+
+add('Pioglitazone', 'Gemfibrozil', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP2C8',
+  'CYP2C8 inhibition.',
+  'زيادة تراكيز البيوجليتازون',
+  'Increased pioglitazone levels.',
+  'خفض جرعة البيوجليتازون',
+  'Reduce pioglitazone dose.'
+);
+
+add('Repaglinide', 'Cyclosporine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط OATP1B1 و CYP3A4',
+  'OATP1B1 and CYP3A4 inhibition.',
+  'نقص سكر شديد',
+  'Severe hypoglycemia.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+add('Sitagliptin', 'Digoxin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط P-glycoprotein',
+  'P-glycoprotein inhibition.',
+  'زيادة طفيفة في تراكيز الديجوكسين',
+  'Slight increase in digoxin levels.',
+  'مراقبة عند بدء العلاج',
+  'Monitor when initiating.'
+);
+
+add('Empagliflozin', 'Diuretics', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تأثير مدر للبول تآزري',
+  'Synergistic diuretic effect.',
+  'جفاف وانخفاض ضغط دم',
+  'Dehydration and hypotension.',
+  'مراقبة حجم السوائل وضغط الدم',
+  'Monitor volume status and BP.'
+);
+
+add('Acarbose', 'Digestive Enzymes', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تضاد في التأثير',
+  'Antagonistic effect.',
+  'تقليل فعالية الأكاربوز',
+  'Reduced acarbose efficacy.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+add('Exenatide', 'Oral Medications', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تأخير إفراغ المعدة',
+  'Delayed gastric emptying.',
+  'تقليل امتصاص الأدوية الفموية',
+  'Reduced oral drug absorption.',
+  'تناول الأدوية الفموية قبل ساعة من الإكسيناتايد',
+  'Take oral meds 1 hour before exenatide.'
+);
+
+// Thyroid medications
+add('Levothyroxine', 'Calcium Carbonate', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'ارتباط في الأمعاء',
+  'Intestinal binding.',
+  'انخفاض امتصاص الليفوثيروكسين',
+  'Reduced levothyroxine absorption.',
+  'فصل الجرعات بـ 4 ساعات',
+  'Separate doses by 4 hours.'
+);
+
+add('Levothyroxine', 'Ferrous Sulfate', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تكوين معقدات حديد-هرمون',
+  'Iron-hormone complex formation.',
+  'قصور درقية غير مسيطر عليه',
+  'Uncontrolled hypothyroidism.',
+  'فصل بـ 4 ساعات - مراقبة TSH',
+  'Separate by 4h - monitor TSH.'
+);
+
+add('Levothyroxine', 'Proton Pump Inhibitors', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'زيادة pH المعدة - تقليل الامتصاص',
+  'Increased gastric pH reduces absorption.',
+  'قصور درقية',
+  'Hypothyroidism.',
+  'قد تحتاج زيادة جرعة الليفوثيروكسين',
+  'May need increased levothyroxine dose.'
+);
+
+add('Levothyroxine', 'Soy Products', InteractionType.DRUG_FOOD, InteractionSeverity.MODERATE,
+  'تقليل امتصاص الهرمون',
+  'Reduced hormone absorption.',
+  'انخفاض فعالية العلاج',
+  'Reduced treatment efficacy.',
+  'تناول الهرمون على معدة فارغة - تجنب الصويا خلال ساعة',
+  'Take on empty stomach - avoid soy within 1 hour.'
+);
+
+add('Methimazole', 'Warfarin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تأثير على عوامل التخثر المعتمدة على فيتامين K',
+  'Effect on vitamin K-dependent clotting factors.',
+  'زيادة INR',
+  'Increased INR.',
+  'مراقبة INR عند تغيير جرعة الميثيمازول',
+  'Monitor INR when changing methimazole dose.'
+);
+
+// Corticosteroids
+add('Prednisone', 'NSAIDs', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تأثير تآزري على تخريش المعدة',
+  'Synergistic gastric irritation.',
+  'قرحة معدية ونزيف هضمي',
+  'Gastric ulcer and GI bleeding.',
+  'استخدام مثبط مضخة البروتون - تجنب الجمع إن أمكن',
+  'Use PPI - avoid combination if possible.'
+);
+
+add('Dexamethasone', 'Phenytoin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تحفيز CYP3A4 - تسريع أيض الديكساميثازون',
+  'CYP3A4 induction accelerates dexamethasone metabolism.',
+  'انخفاض فعالية الكورتيزون',
+  'Reduced corticosteroid efficacy.',
+  'قد تحتاج مضاعفة الجرعة',
+  'May need to double the dose.'
+);
+
+add('Methylprednisolone', 'Live Vaccines', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط المناعة',
+  'Immunosuppression.',
+  'خطر العدوى من اللقاح الحي',
+  'Risk of infection from live vaccine.',
+  'تجنب اللقاحات الحية - استخدام لقاحات معطلة',
+  'Avoid live vaccines - use inactivated vaccines.'
+);
+
+add('Hydrocortisone', 'Rifampin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تحفيز قوي لـ CYP3A4',
+  'Potent CYP3A4 induction.',
+  'فشل العلاج بالكورتيزون',
+  'Corticosteroid treatment failure.',
+  'زيادة جرعة الهيدروكورتيزون 2-3 أضعاف',
+  'Increase hydrocortisone dose 2-3 fold.'
+);
+
+add('Prednisolone', 'Ketoconazole', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'زيادة تأثيرات الكورتيزون الجانبية',
+  'Increased corticosteroid side effects.',
+  'خفض جرعة البريدنيزولون',
+  'Reduce prednisolone dose.'
+);

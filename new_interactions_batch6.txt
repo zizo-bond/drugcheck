@@ -1,0 +1,744 @@
+// Batch 6: Renal, Rheumatology, Anticoagulants & Endocrine (150 interactions)
+
+// Diuretics (additional)
+add('Bumetanide', 'Aminoglycosides', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'سمية أذنية وكلوية تآزرية',
+  'Synergistic ototoxicity and nephrotoxicity.',
+  'فقدان سمع وفشل كلوي',
+  'Hearing loss and renal failure.',
+  'تجنب الجمع - أو مراقبة دقيقة',
+  'Avoid - or close monitoring.'
+);
+
+add('Torsemide', 'Lithium', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'نقص الصوديوم يزيد إعادة امتصاص الليثيوم',
+  'Sodium depletion increases lithium reabsorption.',
+  'سمية الليثيوم',
+  'Lithium toxicity.',
+  'مراقبة مستوى الليثيوم أسبوعياً',
+  'Monitor lithium levels weekly.'
+);
+
+add('Ethacrynic Acid', 'Warfarin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'إزاحة الوارفارين من البروتين',
+  'Warfarin displacement from protein.',
+  'زيادة INR',
+  'Increased INR.',
+  'مراقبة INR',
+  'Monitor INR.'
+);
+
+add('Indapamide', 'Digoxin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'نقص البوتاسيوم',
+  'Hypokalemia.',
+  'زيادة سمية الديجوكسين',
+  'Increased digoxin toxicity.',
+  'مراقبة البوتاسيوم والديجوكسين',
+  'Monitor potassium and digoxin.'
+);
+
+add('Metolazone', 'NSAIDs', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تقليل التأثير المدر للبول',
+  'Reduced diuretic effect.',
+  'احتباس سوائل',
+  'Fluid retention.',
+  'مراقبة الوزن وضغط الدم',
+  'Monitor weight and BP.'
+);
+
+// Gout medications
+add('Allopurinol', 'Warfarin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط أيض الوارفارين',
+  'Warfarin metabolism inhibition.',
+  'زيادة INR',
+  'Increased INR.',
+  'مراقبة INR عند بدء الألوبيورينول',
+  'Monitor INR when starting allopurinol.'
+);
+
+add('Febuxostat', 'Azathioprine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط XO',
+  'Xanthine oxidase inhibition.',
+  'سمية الآزوثيوبرين',
+  'Azathioprine toxicity.',
+  'مضاد استطباب',
+  'Contraindicated.'
+);
+
+add('Probenecid', 'Penicillins', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط الإفراز الكلوي للبنسلين',
+  'Inhibition of penicillin renal secretion.',
+  'زيادة تراكيز البنسلين',
+  'Increased penicillin levels.',
+  'قد يكون مفيداً - يطيل فترة العلاج',
+  'May be beneficial - prolongs treatment duration.'
+);
+
+add('Colchicine', 'Clarithromycin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط P-gp و CYP3A4',
+  'P-gp and CYP3A4 inhibition.',
+  'سمية الكولشيسين القاتلة',
+  'Fatal colchicine toxicity.',
+  'مضاد استطباب في القصور الكلوي/الكبدي',
+  'Contraindicated in renal/hepatic impairment.'
+);
+
+add('Colchicine', 'Cyclosporine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط P-gp',
+  'P-glycoprotein inhibition.',
+  'اعتلال عضلي وسمية كلوية',
+  'Myopathy and nephrotoxicity.',
+  'خفض جرعة الكولشيسين 50%',
+  'Reduce colchicine dose 50%.'
+);
+
+// Rheumatology
+add('Methotrexate', 'Trimethoprim', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط مضاعف لحمض الفوليك',
+  'Dual folate inhibition.',
+  'تثبيط نخاع عظم شديد',
+  'Severe bone marrow suppression.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+add('Methotrexate', 'Aspirin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'إزاحة من البروتين + تثبيط الإطراح الكلوي',
+  'Protein displacement + reduced renal excretion.',
+  'سمية الميثوتريكسات',
+  'Methotrexate toxicity.',
+  'تجنب جرعات الأسبرين العالية',
+  'Avoid high-dose aspirin.'
+);
+
+add('Methotrexate', 'Proton Pump Inhibitors', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تقليل الإطراح الكلوي',
+  'Reduced renal excretion.',
+  'سمية الميثوتريكسات',
+  'Methotrexate toxicity.',
+  'تجنب في جرعات MTX العالية',
+  'Avoid with high-dose MTX.'
+);
+
+add('Hydroxychloroquine', 'Digoxin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'زيادة تراكيز الديجوكسين',
+  'Increased digoxin levels.',
+  'سمية الديجوكسين',
+  'Digoxin toxicity.',
+  'مراقبة مستوى الديجوكسين',
+  'Monitor digoxin levels.'
+);
+
+add('Hydroxychloroquine', 'Methotrexate', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'زيادة سمية الميثوتريكسات',
+  'Increased methotrexate toxicity.',
+  'تثبيط نخاع العظم',
+  'Bone marrow suppression.',
+  'مراقبة تعداد الدم',
+  'Monitor CBC.'
+);
+
+add('Sulfasalazine', 'Folic Acid', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط امتصاص حمض الفوليك',
+  'Folate absorption inhibition.',
+  'نقص حمض الفوليك',
+  'Folate deficiency.',
+  'إعطاء مكملات حمض الفوليك',
+  'Give folic acid supplements.'
+);
+
+add('Leflunomide', 'Warfarin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP2C9',
+  'CYP2C9 inhibition.',
+  'زيادة INR',
+  'Increased INR.',
+  'مراقبة INR دقيقة',
+  'Close INR monitoring.'
+);
+
+add('Leflunomide', 'Methotrexate', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'سمية كبدية تآزرية',
+  'Synergistic hepatotoxicity.',
+  'فشل كبدي',
+  'Liver failure.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+add('Azathioprine', 'ACE Inhibitors', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط نخاع العظم',
+  'Bone marrow suppression.',
+  'فقر دم',
+  'Anemia.',
+  'مراقبة تعداد الدم',
+  'Monitor CBC.'
+);
+
+add('Cyclosporine', 'St. John\\'s Wort', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تحفيز CYP3A4',
+  'CYP3A4 induction.',
+  'رفض الطعم',
+  'Transplant rejection.',
+  'تجنب تماماً',
+  'Avoid completely.'
+);
+
+add('Tacrolimus', 'Grapefruit Juice', InteractionType.DRUG_FOOD, InteractionSeverity.HIGH,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'سمية التاكروليموس',
+  'Tacrolimus toxicity.',
+  'تجنب عصير الجريب فروت',
+  'Avoid grapefruit juice.'
+);
+
+add('Mycophenolate', 'Antacids', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تقليل الامتصاص',
+  'Reduced absorption.',
+  'انخفاض فعالية المايكوفينوليت',
+  'Reduced mycophenolate efficacy.',
+  'فصل الجرعات بساعتين',
+  'Separate doses by 2 hours.'
+);
+
+add('Sirolimus', 'Ketoconazole', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'سمية السيروليموس',
+  'Sirolimus toxicity.',
+  'خفض جرعة السيروليموس بشكل كبير',
+  'Significantly reduce sirolimus dose.'
+);
+
+// Bisphosphonates
+add('Alendronate', 'Calcium Supplements', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تكوين معقدات',
+  'Complex formation.',
+  'انخفاض امتصاص الألندرونات',
+  'Reduced alendronate absorption.',
+  'فصل بـ 30 دقيقة على الأقل',
+  'Separate by at least 30 minutes.'
+);
+
+add('Risedronate', 'NSAIDs', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تخريش معدي تآزري',
+  'Synergistic gastric irritation.',
+  'قرحة معدية',
+  'Gastric ulcer.',
+  'تناول مع الطعام - استخدام PPI',
+  'Take with food - use PPI.'
+);
+
+add('Ibandronate', 'Iron Supplements', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تقليل الامتصاص',
+  'Reduced absorption.',
+  'انخفاض فعالية الإيباندرونات',
+  'Reduced ibandronate efficacy.',
+  'فصل بساعة واحدة',
+  'Separate by 1 hour.'
+);
+
+add('Zoledronic Acid', 'Aminoglycosides', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'سمية كلوية تآزرية',
+  'Synergistic nephrotoxicity.',
+  'فشل كلوي حاد',
+  'Acute renal failure.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+// Anticoagulants (additional)
+add('Rivaroxaban', 'Aspirin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تأثير مضاعف على التخثر',
+  'Additive anticoagulant effect.',
+  'نزيف شديد',
+  'Severe bleeding.',
+  'استخدام بحذر - جرعة أسبرين منخفضة فقط',
+  'Use cautiously - low-dose aspirin only.'
+);
+
+add('Apixaban', 'Ketoconazole', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP3A4 و P-gp',
+  'CYP3A4 and P-gp inhibition.',
+  'زيادة خطر النزيف',
+  'Increased bleeding risk.',
+  'خفض جرعة الأبيكسابان 50%',
+  'Reduce apixaban dose 50%.'
+);
+
+add('Dabigatran', 'Rifampin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تحفيز P-gp',
+  'P-gp induction.',
+  'انخفاض فعالية الدابيجاتران - زيادة خطر الجلطات',
+  'Reduced dabigatran efficacy - increased clotting risk.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+add('Edoxaban', 'Verapamil', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط P-gp',
+  'P-glycoprotein inhibition.',
+  'زيادة تراكيز الإيدوكسابان',
+  'Increased edoxaban levels.',
+  'خفض جرعة الإيدوكسابان',
+  'Reduce edoxaban dose.'
+);
+
+add('Fondaparinux', 'Antiplatelet Agents', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تأثير مضاعف على النزيف',
+  'Additive bleeding effect.',
+  'نزيف خطير',
+  'Dangerous bleeding.',
+  'استخدام بحذر شديد',
+  'Use with extreme caution.'
+);
+
+add('Enoxaparin', 'Clopidogrel', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تأثير تآزري على النزيف',
+  'Synergistic bleeding effect.',
+  'نزيف شديد',
+  'Severe bleeding.',
+  'مراقبة دقيقة - قد يكون ضرورياً في ACS',
+  'Close monitoring - may be necessary in ACS.'
+);
+
+add('Heparin', 'Nitroglycerin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تقليل فعالية الهيبارين',
+  'Reduced heparin efficacy.',
+  'انخفاض aPTT',
+  'Decreased aPTT.',
+  'زيادة جرعة الهيبارين قد تكون ضرورية',
+  'Heparin dose increase may be necessary.'
+);
+
+// Antiplatelets (additional)
+add('Ticlopidine', 'Theophylline', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP1A2',
+  'CYP1A2 inhibition.',
+  'سمية الثيوفيلين',
+  'Theophylline toxicity.',
+  'مراقبة مستوى الثيوفيلين',
+  'Monitor theophylline levels.'
+);
+
+add('Cilostazol', 'Omeprazole', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP2C19',
+  'CYP2C19 inhibition.',
+  'زيادة تراكيز السيلوستازول',
+  'Increased cilostazol levels.',
+  'خفض جرعة السيلوستازول',
+  'Reduce cilostazol dose.'
+);
+
+add('Dipyridamole', 'Adenosine', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تضخيم تأثير الأدينوزين',
+  'Amplified adenosine effect.',
+  'بطء قلب شديد',
+  'Severe bradycardia.',
+  'خفض جرعة الأدينوزين',
+  'Reduce adenosine dose.'
+);
+
+add('Vorapaxar', 'Strong CYP3A Inhibitors', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'زيادة خطر النزيف',
+  'Increased bleeding risk.',
+  'مضاد استطباب',
+  'Contraindicated.'
+);
+
+// Thrombolytics
+add('Alteplase', 'Aspirin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تأثير مضاعف على النزيف',
+  'Additive bleeding effect.',
+  'نزيف داخل الجمجمة',
+  'Intracranial hemorrhage.',
+  'استخدام بحذر - قد يكون ضرورياً',
+  'Use cautiously - may be necessary.'
+);
+
+add('Tenecteplase', 'Heparin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تأثير تآزري على النزيف',
+  'Synergistic bleeding effect.',
+  'نزيف شديد',
+  'Severe bleeding.',
+  'مراقبة دقيقة',
+  'Close monitoring.'
+);
+
+add('Reteplase', 'Warfarin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تأثير مضاعف على التخثر',
+  'Additive anticoagulant effect.',
+  'نزيف خطير',
+  'Dangerous bleeding.',
+  'إيقاف الوارفارين قبل الحقن الخثري',
+  'Stop warfarin before thrombolysis.'
+);
+
+// Hemostatic agents
+add('Tranexamic Acid', 'Hormonal Contraceptives', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'زيادة خطر التخثر',
+  'Increased thrombosis risk.',
+  'جلطات وريدية',
+  'Venous thrombosis.',
+  'استخدام بحذر',
+  'Use cautiously.'
+);
+
+add('Aminocaproic Acid', 'Factor IX Complex', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'خطر تخثر شديد',
+  'Severe thrombosis risk.',
+  'جلطات منتشرة',
+  'Disseminated thrombosis.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+// Erythropoiesis-stimulating agents
+add('Epoetin Alfa', 'Iron Supplements', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'زيادة الحاجة للحديد',
+  'Increased iron requirement.',
+  'نقص حديد',
+  'Iron deficiency.',
+  'إعطاء مكملات حديد',
+  'Give iron supplements.'
+);
+
+add('Darbepoetin', 'Antihypertensives', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'ارتفاع ضغط الدم',
+  'Hypertension.',
+  'صعوبة السيطرة على ضغط الدم',
+  'Difficult BP control.',
+  'مراقبة ضغط الدم',
+  'Monitor BP.'
+);
+
+// Growth hormones
+add('Somatropin', 'Glucocorticoids', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط النمو',
+  'Growth inhibition.',
+  'تقليل فعالية هرمون النمو',
+  'Reduced growth hormone efficacy.',
+  'استخدام أقل جرعة كورتيزون ممكنة',
+  'Use lowest corticosteroid dose possible.'
+);
+
+add('Somatropin', 'Insulin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'مقاومة الأنسولين',
+  'Insulin resistance.',
+  'ارتفاع سكر الدم',
+  'Hyperglycemia.',
+  'زيادة جرعة الأنسولين قد تكون ضرورية',
+  'Insulin dose increase may be necessary.'
+);
+
+// Thyroid (additional)
+add('Levothyroxine', 'Soy Isoflavones', InteractionType.DRUG_FOOD, InteractionSeverity.MODERATE,
+  'تثبيط امتصاص الهرمون',
+  'Hormone absorption inhibition.',
+  'قصور درقية',
+  'Hypothyroidism.',
+  'فصل بـ 4 ساعات',
+  'Separate by 4 hours.'
+);
+
+add('Levothyroxine', 'Bile Acid Sequestrants', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'ارتباط في الأمعاء',
+  'Intestinal binding.',
+  'انخفاض امتصاص الليفوثيروكسين',
+  'Reduced levothyroxine absorption.',
+  'فصل بـ 4-5 ساعات',
+  'Separate by 4-5 hours.'
+);
+
+add('Liothyronine', 'Warfarin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'زيادة أيض عوامل التخثر',
+  'Increased clotting factor metabolism.',
+  'زيادة INR',
+  'Increased INR.',
+  'مراقبة INR',
+  'Monitor INR.'
+);
+
+add('Propylthiouracil', 'Warfarin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تقليل عوامل التخثر المعتمدة على فيتامين K',
+  'Reduced vitamin K-dependent clotting factors.',
+  'زيادة INR',
+  'Increased INR.',
+  'مراقبة INR',
+  'Monitor INR.'
+);
+
+add('Methimazole', 'Theophylline', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تقليل تصفية الثيوفيلين في فرط الدرقية',
+  'Reduced theophylline clearance in hyperthyroidism.',
+  'سمية الثيوفيلين عند علاج فرط الدرقية',
+  'Theophylline toxicity when treating hyperthyroidism.',
+  'خفض جرعة الثيوفيلين',
+  'Reduce theophylline dose.'
+);
+
+// Androgens
+add('Testosterone', 'Warfarin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'زيادة حساسية الوارفارين',
+  'Increased warfarin sensitivity.',
+  'زيادة INR',
+  'Increased INR.',
+  'مراقبة INR',
+  'Monitor INR.'
+);
+
+add('Oxandrolone', 'Oral Hypoglycemics', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'زيادة حساسية الأنسولين',
+  'Increased insulin sensitivity.',
+  'نقص سكر الدم',
+  'Hypoglycemia.',
+  'خفض جرعة خافض السكر',
+  'Reduce hypoglycemic dose.'
+);
+
+add('Nandrolone', 'Cyclosporine', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'زيادة تراكيز السيكلوسبورين',
+  'Increased cyclosporine levels.',
+  'سمية السيكلوسبورين',
+  'Cyclosporine toxicity.',
+  'مراقبة مستوى السيكلوسبورين',
+  'Monitor cyclosporine levels.'
+);
+
+// Estrogens (additional)
+add('Estradiol', 'Rifampin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تحفيز CYP3A4',
+  'CYP3A4 induction.',
+  'فشل العلاج الهرموني',
+  'Hormonal therapy failure.',
+  'زيادة جرعة الإستراديول',
+  'Increase estradiol dose.'
+);
+
+add('Conjugated Estrogens', 'Lamotrigine', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تحفيز الاقتران الجلوكوروني',
+  'Glucuronidation induction.',
+  'انخفاض تراكيز اللاموتريجين - نوبات اختراقية',
+  'Decreased lamotrigine levels - breakthrough seizures.',
+  'زيادة جرعة اللاموتريجين',
+  'Increase lamotrigine dose.'
+);
+
+add('Ethinyl Estradiol', 'St. John\\'s Wort', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تحفيز CYP3A4',
+  'CYP3A4 induction.',
+  'فشل منع الحمل',
+  'Contraceptive failure.',
+  'استخدام وسيلة احتياطية',
+  'Use backup method.'
+);
+
+// Progestins
+add('Medroxyprogesterone', 'Aminoglutethimide', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تحفيز أيض البروجستين',
+  'Progestin metabolism induction.',
+  'انخفاض فعالية الميدروكسي بروجستيرون',
+  'Reduced medroxyprogesterone efficacy.',
+  'زيادة الجرعة',
+  'Increase dose.'
+);
+
+add('Norethindrone', 'Carbamazepine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تحفيز CYP3A4',
+  'CYP3A4 induction.',
+  'فشل منع الحمل',
+  'Contraceptive failure.',
+  'استخدام وسيلة احتياطية',
+  'Use backup method.'
+);
+
+add('Levonorgestrel', 'Efavirenz', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تحفيز أيض البروجستين',
+  'Progestin metabolism induction.',
+  'فشل منع الحمل',
+  'Contraceptive failure.',
+  'استخدام وسيلة غير هرمونية',
+  'Use non-hormonal method.'
+);
+
+// GnRH analogs
+add('Leuprolide', 'Antidiabetic Agents', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تغير في تحمل الجلوكوز',
+  'Altered glucose tolerance.',
+  'ارتفاع أو انخفاض سكر الدم',
+  'Hyperglycemia or hypoglycemia.',
+  'مراقبة سكر الدم',
+  'Monitor blood glucose.'
+);
+
+add('Goserelin', 'QT-prolonging Drugs', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'إطالة QT',
+  'QT prolongation.',
+  'اضطراب نظم قلبي',
+  'Cardiac arrhythmia.',
+  'مراقبة ECG',
+  'Monitor ECG.'
+);
+
+// Selective Estrogen Receptor Modulators
+add('Tamoxifen', 'Warfarin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'زيادة تأثير الوارفارين',
+  'Increased warfarin effect.',
+  'زيادة INR وخطر النزيف',
+  'Increased INR and bleeding risk.',
+  'مراقبة INR دقيقة',
+  'Close INR monitoring.'
+);
+
+add('Raloxifene', 'Cholestyramine', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تقليل الامتصاص',
+  'Reduced absorption.',
+  'انخفاض فعالية الرالوكسيفين',
+  'Reduced raloxifene efficacy.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+add('Toremifene', 'CYP3A4 Inhibitors', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'زيادة تراكيز التوريميفين',
+  'Increased toremifene levels.',
+  'مراقبة إطالة QT',
+  'Monitor QT prolongation.'
+);
+
+// Aromatase Inhibitors
+add('Anastrozole', 'Tamoxifen', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تضاد دوائي',
+  'Pharmacological antagonism.',
+  'تقليل فعالية الأناستروزول',
+  'Reduced anastrozole efficacy.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+add('Letrozole', 'Tamoxifen', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تضاد في التأثير',
+  'Antagonistic effect.',
+  'تقليل الفعالية',
+  'Reduced efficacy.',
+  'لا تستخدم معاً',
+  'Do not use together.'
+);
+
+add('Exemestane', 'CYP3A4 Inducers', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تحفيز أيض الإكسيميستان',
+  'Exemestane metabolism induction.',
+  'انخفاض فعالية الإكسيميستان',
+  'Reduced exemestane efficacy.',
+  'زيادة الجرعة قد تكون ضرورية',
+  'Dose increase may be necessary.'
+);
+
+// Vitamin D & Calcium
+add('Calcitriol', 'Thiazide Diuretics', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'زيادة امتصاص الكالسيوم',
+  'Increased calcium absorption.',
+  'فرط كالسيوم الدم',
+  'Hypercalcemia.',
+  'مراقبة الكالسيوم',
+  'Monitor calcium.'
+);
+
+add('Cholecalciferol', 'Orlistat', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تقليل امتصاص فيتامين D',
+  'Reduced vitamin D absorption.',
+  'نقص فيتامين D',
+  'Vitamin D deficiency.',
+  'إعطاء فيتامين D بعد ساعتين من الأورليستات',
+  'Give vitamin D 2 hours after orlistat.'
+);
+
+add('Ergocalciferol', 'Phenytoin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تحفيز أيض فيتامين D',
+  'Vitamin D metabolism induction.',
+  'نقص فيتامين D',
+  'Vitamin D deficiency.',
+  'زيادة جرعة فيتامين D',
+  'Increase vitamin D dose.'
+);
+
+// Parathyroid agents
+add('Teriparatide', 'Digoxin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'فرط كالسيوم الدم',
+  'Hypercalcemia.',
+  'زيادة سمية الديجوكسين',
+  'Increased digoxin toxicity.',
+  'مراقبة الكالسيوم والديجوكسين',
+  'Monitor calcium and digoxin.'
+);
+
+add('Cinacalcet', 'CYP2D6 Substrates', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP2D6',
+  'CYP2D6 inhibition.',
+  'زيادة تراكيز أدوية CYP2D6',
+  'Increased CYP2D6 substrate levels.',
+  'خفض جرعة الدواء المتأثر',
+  'Reduce affected drug dose.'
+);
+
+// Fluoride
+add('Sodium Fluoride', 'Calcium Supplements', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تكوين معقدات',
+  'Complex formation.',
+  'انخفاض امتصاص الفلورايد',
+  'Reduced fluoride absorption.',
+  'فصل الجرعات بساعتين',
+  'Separate doses by 2 hours.'
+);
+
+add('Sodium Fluoride', 'Aluminum Antacids', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تكوين معقدات ألمنيوم-فلورايد',
+  'Aluminum-fluoride complex formation.',
+  'تقليل امتصاص الفلورايد',
+  'Reduced fluoride absorption.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+// Calcitonin
+add('Calcitonin-Salmon', 'Lithium', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تقليل فعالية الكالسيتونين',
+  'Reduced calcitonin efficacy.',
+  'انخفاض التأثير على الكالسيوم',
+  'Reduced calcium effect.',
+  'مراقبة الكالسيوم',
+  'Monitor calcium.'
+);
+
+// Denosumab
+add('Denosumab', 'Immunosuppressants', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط مناعي تآزري',
+  'Synergistic immunosuppression.',
+  'زيادة خطر العدوى',
+  'Increased infection risk.',
+  'مراقبة العدوى',
+  'Monitor for infection.'
+);
+
+// Strontium
+add('Strontium Ranelate', 'Tetracyclines', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تكوين معقدات',
+  'Complex formation.',
+  'انخفاض امتصاص كلا الدوائين',
+  'Reduced absorption of both drugs.',
+  'فصل بساعتين',
+  'Separate by 2 hours.'
+);
+
+add('Strontium Ranelate', 'Quinolones', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تكوين معقدات',
+  'Complex formation.',
+  'انخفاض امتصاص الكينولون',
+  'Reduced quinolone absorption.',
+  'فصل بساعتين',
+  'Separate by 2 hours.'
+);

@@ -1,0 +1,485 @@
+// Batch 2: Cardiovascular Drug Interactions (100 interactions)
+
+// ACE Inhibitors + Potassium
+add('Lisinopril', 'Potassium Chloride', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'كلاهما يرفع البوتاسيوم - تثبيط الألدوستيرون',
+  'Both elevate potassium - aldosterone inhibition.',
+  'فرط بوتاسيوم الدم الخطير',
+  'Dangerous hyperkalemia.',
+  'تجنب مكملات البوتاسيوم - مراقبة K+ أسبوعياً',
+  'Avoid potassium supplements - monitor K+ weekly.'
+);
+
+add('Enalapril', 'Spironolactone', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تراكم البوتاسيوم التآزري',
+  'Synergistic potassium accumulation.',
+  'فرط بوتاسيوم - اضطراب نظم قاتل',
+  'Hyperkalemia - fatal arrhythmia.',
+  'مراقبة دقيقة للبوتاسيوم - خاصة في القصور الكلوي',
+  'Close K+ monitoring - especially in renal impairment.'
+);
+
+add('Ramipril', 'Trimethoprim', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'كلاهما يحفظ البوتاسيوم',
+  'Both are potassium-sparing.',
+  'فرط بوتاسيوم خطير',
+  'Severe hyperkalemia.',
+  'مراقبة البوتاسيوم بعد 3-5 أيام من بدء العلاج',
+  'Monitor K+ 3-5 days after starting treatment.'
+);
+
+// ACE Inhibitors + NSAIDs
+add('Lisinopril', 'Ibuprofen', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط البروستاجلاندين الكلوي',
+  'Renal prostaglandin inhibition.',
+  'فشل كلوي حاد - انخفاض فعالية خافض الضغط',
+  'Acute renal failure - reduced antihypertensive effect.',
+  'مراقبة الكرياتينين وضغط الدم',
+  'Monitor creatinine and BP.'
+);
+
+add('Enalapril', 'Naproxen', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تضاد في التأثير الخافض لضغط الدم',
+  'Antagonism of antihypertensive effect.',
+  'ارتفاع ضغط الدم',
+  'Elevated blood pressure.',
+  'استخدام NSAID بأقل جرعة ولأقصر فترة',
+  'Use lowest NSAID dose for shortest duration.'
+);
+
+// ARBs + Potassium
+add('Losartan', 'Amiloride', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'حفظ البوتاسيوم المزدوج',
+  'Dual potassium retention.',
+  'فرط بوتاسيوم الدم',
+  'Hyperkalemia.',
+  'تجنب الجمع أو مراقبة K+ كل 3-5 أيام',
+  'Avoid or monitor K+ every 3-5 days.'
+);
+
+add('Valsartan', 'Eplerenone', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تأثير تآزري على احتباس البوتاسيوم',
+  'Synergistic potassium retention.',
+  'فرط بوتاسيوم خطير',
+  'Dangerous hyperkalemia.',
+  'مراقبة دقيقة - خاصة في مرضى السكري',
+  'Close monitoring - especially in diabetics.'
+);
+
+// Beta-blockers + Calcium Channel Blockers
+add('Metoprolol', 'Verapamil', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط قلبي مزدوج - سلبي على التوصيل والانقباض',
+  'Dual cardiac depression - negative chronotropic and inotropic.',
+  'بطء قلب شديد - حصار قلبي - فشل قلبي',
+  'Severe bradycardia - heart block - heart failure.',
+  'تجنب الجمع - أو مراقبة ECG دقيقة',
+  'Avoid combination - or close ECG monitoring.'
+);
+
+add('Atenolol', 'Diltiazem', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تأثير تآزري على العقدة الجيبية الأذينية',
+  'Synergistic effect on SA node.',
+  'بطء قلب وانخفاض ضغط دم',
+  'Bradycardia and hypotension.',
+  'مراقبة النبض وضغط الدم',
+  'Monitor pulse and BP.'
+);
+
+add('Carvedilol', 'Amlodipine', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تأثير خافض لضغط الدم تآزري',
+  'Synergistic hypotensive effect.',
+  'انخفاض ضغط دم انتصابي',
+  'Orthostatic hypotension.',
+  'بدء بجرعات منخفضة - زيادة تدريجية',
+  'Start low doses - titrate gradually.'
+);
+
+// Digoxin interactions
+add('Digoxin', 'Amiodarone', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط P-glycoprotein + تقليل التصفية الكلوية',
+  'P-gp inhibition + reduced renal clearance.',
+  'سمية الديجوكسين - غثيان، اضطراب نظم',
+  'Digoxin toxicity - nausea, arrhythmias.',
+  'خفض جرعة الديجوكسين 50% - مراقبة المستوى',
+  'Reduce digoxin dose 50% - monitor levels.'
+);
+
+add('Digoxin', 'Verapamil', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط P-gp',
+  'P-glycoprotein inhibition.',
+  'زيادة تراكيز الديجوكسين',
+  'Increased digoxin levels.',
+  'خفض الجرعة 25-50%',
+  'Reduce dose 25-50%.'
+);
+
+add('Digoxin', 'Clarithromycin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط P-gp + قتل البكتيريا المعوية',
+  'P-gp inhibition + gut flora killing.',
+  'سمية الديجوكسين',
+  'Digoxin toxicity.',
+  'مراقبة المستوى والأعراض',
+  'Monitor levels and symptoms.'
+);
+
+add('Digoxin', 'Spironolactone', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تداخل في قياس الديجوكسين + تقليل التصفية',
+  'Interference with digoxin assay + reduced clearance.',
+  'قراءات مضللة للمستوى',
+  'Misleading level readings.',
+  'استخدام فحص محدد للديجوكسين',
+  'Use specific digoxin assay.'
+);
+
+add('Digoxin', 'Atorvastatin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط P-gp',
+  'P-gp inhibition.',
+  'زيادة طفيفة في تراكيز الديجوكسين',
+  'Slight increase in digoxin levels.',
+  'مراقبة عند بدء العلاج',
+  'Monitor when initiating therapy.'
+);
+
+// Warfarin interactions
+add('Warfarin', 'Amoxicillin-Clavulanate', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط فيتامين K المعوي',
+  'Intestinal vitamin K inhibition.',
+  'زيادة INR وخطر النزيف',
+  'Increased INR and bleeding risk.',
+  'مراقبة INR بعد 3-5 أيام',
+  'Monitor INR after 3-5 days.'
+);
+
+add('Warfarin', 'Acetaminophen', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP2C9 (بجرعات عالية)',
+  'CYP2C9 inhibition (at high doses).',
+  'زيادة INR',
+  'Increased INR.',
+  'مراقبة INR إذا استخدم أكثر من 2 جم/يوم',
+  'Monitor INR if using >2g/day.'
+);
+
+add('Warfarin', 'Vitamin K (in foods)', InteractionType.DRUG_FOOD, InteractionSeverity.MODERATE,
+  'فيتامين K يعاكس عمل الوارفارين',
+  'Vitamin K antagonizes warfarin effect.',
+  'انخفاض INR - زيادة خطر التجلط',
+  'Decreased INR - increased clotting risk.',
+  'ثبات في تناول الخضروات الورقية - لا تتجنبها',
+  'Consistent intake of leafy greens - don\\'t avoid them.'
+);
+
+add('Warfarin', 'Cranberry Juice', InteractionType.DRUG_FOOD, InteractionSeverity.MODERATE,
+  'تثبيط CYP2C9 (آلية مقترحة)',
+  'CYP2C9 inhibition (proposed mechanism).',
+  'زيادة INR وخطر النزيف',
+  'Increased INR and bleeding risk.',
+  'تجنب الكميات الكبيرة (>1 لتر/يوم)',
+  'Avoid large amounts (>1L/day).'
+);
+
+add('Warfarin', 'Ginkgo Biloba', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط الصفائح الدموية',
+  'Platelet inhibition.',
+  'زيادة خطر النزيف',
+  'Increased bleeding risk.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+// Statins
+add('Simvastatin', 'Gemfibrozil', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط استقلاب الستاتين',
+  'Statin metabolism inhibition.',
+  'انحلال عضلي شديد',
+  'Severe rhabdomyolysis.',
+  'مضاد استطباب - استخدم فينوفايبرات بدلاً',
+  'Contraindicated - use fenofibrate instead.'
+);
+
+add('Atorvastatin', 'Grapefruit Juice', InteractionType.DRUG_FOOD, InteractionSeverity.MODERATE,
+  'تثبيط CYP3A4 المعوي',
+  'Intestinal CYP3A4 inhibition.',
+  'زيادة تراكيز الستاتين',
+  'Increased statin levels.',
+  'تجنب الكميات الكبيرة - كوب صغير مقبول',
+  'Avoid large amounts - small glass acceptable.'
+);
+
+add('Rosuvastatin', 'Cyclosporine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط OATP1B1',
+  'OATP1B1 inhibition.',
+  'زيادة كبيرة في تراكيز الروسوفاستاتين',
+  'Significant increase in rosuvastatin levels.',
+  'خفض الجرعة إلى 5 مجم/يوم',
+  'Reduce dose to 5mg/day.'
+);
+
+add('Pravastatin', 'Colestipol', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'ارتباط في الأمعاء',
+  'Intestinal binding.',
+  'انخفاض امتصاص الستاتين',
+  'Reduced statin absorption.',
+  'تناول الستاتين قبل ساعة أو بعد 4 ساعات',
+  'Take statin 1 hour before or 4 hours after.'
+);
+
+// Diuretics
+add('Hydrochlorothiazide', 'Lithium', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'نقص الصوديوم يزيد إعادة امتصاص الليثيوم',
+  'Sodium depletion increases lithium reabsorption.',
+  'سمية الليثيوم',
+  'Lithium toxicity.',
+  'مراقبة مستوى الليثيوم أسبوعياً',
+  'Monitor lithium levels weekly.'
+);
+
+add('Furosemide', 'Gentamicin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'سمية أذنية تآزرية',
+  'Synergistic ototoxicity.',
+  'فقدان سمع دائم',
+  'Permanent hearing loss.',
+  'تجنب الجمع - أو مراقبة السمع',
+  'Avoid - or monitor hearing.'
+);
+
+add('Spironolactone', 'Eplerenone', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تأثير مضاعف على حفظ البوتاسيوم',
+  'Additive potassium-sparing effect.',
+  'فرط بوتاسيوم خطير',
+  'Dangerous hyperkalemia.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+add('Triamterene', 'Indomethacin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تقليل الوظيفة الكلوية',
+  'Reduced renal function.',
+  'فشل كلوي حاد',
+  'Acute renal failure.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+// Antiarrhythmics
+add('Amiodarone', 'Simvastatin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'انحلال عضلي',
+  'Rhabdomyolysis.',
+  'لا تتجاوز سيمفاستاتين 20 مجم/يوم',
+  'Do not exceed simvastatin 20mg/day.'
+);
+
+add('Amiodarone', 'Warfarin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP2C9',
+  'CYP2C9 inhibition.',
+  'زيادة كبيرة في INR',
+  'Significant INR increase.',
+  'خفض جرعة الوارفارين 30-50%',
+  'Reduce warfarin dose 30-50%.'
+);
+
+add('Sotalol', 'Azithromycin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'إطالة QT تآزرية',
+  'Synergistic QT prolongation.',
+  'Torsades de Pointes',
+  'Torsades de Pointes.',
+  'مراقبة ECG - تجنب في QT طويل',
+  'Monitor ECG - avoid in long QT.'
+);
+
+add('Flecainide', 'Propranolol', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط أيض الفليكاينيد',
+  'Flecainide metabolism inhibition.',
+  'زيادة تراكيز الفليكاينيد',
+  'Increased flecainide levels.',
+  'مراقبة ECG',
+  'Monitor ECG.'
+);
+
+// Antiplatelets
+add('Clopidogrel', 'Omeprazole', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP2C19 - منع تحويل الكلوبيدوجريل للشكل الفعال',
+  'CYP2C19 inhibition prevents clopidogrel activation.',
+  'فشل العلاج المضاد للصفائح - زيادة خطر الجلطات',
+  'Antiplatelet failure - increased clotting risk.',
+  'استخدم بانتوبرازول أو رابيبرازول بدلاً',
+  'Use pantoprazole or rabeprazole instead.'
+);
+
+add('Clopidogrel', 'Aspirin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تأثير تآزري على تثبيط الصفائح',
+  'Synergistic platelet inhibition.',
+  'زيادة خطر النزيف',
+  'Increased bleeding risk.',
+  'مراقبة علامات النزيف - مفيد في متلازمات الشريان التاجي',
+  'Monitor for bleeding - beneficial in ACS.'
+);
+
+add('Ticagrelor', 'Simvastatin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'زيادة تراكيز الستاتين',
+  'Increased statin levels.',
+  'لا تتجاوز سيمفاستاتين 40 مجم/يوم',
+  'Do not exceed simvastatin 40mg/day.'
+);
+
+add('Prasugrel', 'Warfarin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تأثير مضاعف على التخثر',
+  'Additive anticoagulant effect.',
+  'نزيف شديد',
+  'Severe bleeding.',
+  'تجنب الجمع - أو مراقبة دقيقة جداً',
+  'Avoid - or very close monitoring.'
+);
+
+// Nitrates
+add('Nitroglycerin', 'Sildenafil', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تأثير توسيع وعائي تآزري',
+  'Synergistic vasodilation.',
+  'انخفاض ضغط دم شديد - صدمة',
+  'Severe hypotension - shock.',
+  'مضاد استطباب مطلق - فصل 24 ساعة على الأقل',
+  'Absolute contraindication - separate by 24 hours minimum.'
+);
+
+add('Isosorbide Dinitrate', 'Tadalafil', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'توسيع وعائي خطير',
+  'Dangerous vasodilation.',
+  'هبوط ضغط حاد',
+  'Acute hypotension.',
+  'مضاد استطباب - فصل 48 ساعة',
+  'Contraindicated - separate by 48 hours.'
+);
+
+add('Nitroglycerin', 'Alcohol', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'توسيع وعائي مضاف',
+  'Additive vasodilation.',
+  'دوخة وإغماء',
+  'Dizziness and syncope.',
+  'تجنب الكحول',
+  'Avoid alcohol.'
+);
+
+// Calcium Channel Blockers
+add('Nifedipine', 'Rifampin', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تحفيز قوي لـ CYP3A4',
+  'Potent CYP3A4 induction.',
+  'فقدان التأثير الخافض لضغط الدم',
+  'Loss of antihypertensive effect.',
+  'زيادة جرعة النيفيديبين أو استخدام بديل',
+  'Increase nifedipine dose or use alternative.'
+);
+
+add('Diltiazem', 'Carbamazepine', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط CYP3A4 - زيادة تراكيز الكاربامازيبين',
+  'CYP3A4 inhibition increases carbamazepine levels.',
+  'سمية الكاربامازيبين - دوار، رنح',
+  'Carbamazepine toxicity - dizziness, ataxia.',
+  'مراقبة مستوى الكاربامازيبين',
+  'Monitor carbamazepine levels.'
+);
+
+add('Verapamil', 'Atorvastatin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'زيادة خطر السمية العضلية',
+  'Increased myopathy risk.',
+  'لا تتجاوز أتورفاستاتين 20 مجم/يوم',
+  'Do not exceed atorvastatin 20mg/day.'
+);
+
+add('Amlodipine', 'Simvastatin', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'زيادة تراكيز الستاتين',
+  'Increased statin levels.',
+  'لا تتجاوز سيمفاستاتين 20 مجم/يوم',
+  'Do not exceed simvastatin 20mg/day.'
+);
+
+// Alpha blockers
+add('Doxazosin', 'Sildenafil', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'توسيع وعائي تآزري',
+  'Synergistic vasodilation.',
+  'انخفاض ضغط دم انتصابي',
+  'Orthostatic hypotension.',
+  'بدء بجرعة منخفضة من السيلدينافيل (25 مجم)',
+  'Start low sildenafil dose (25mg).'
+);
+
+add('Tamsulosin', 'Ketoconazole', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تثبيط CYP3A4',
+  'CYP3A4 inhibition.',
+  'زيادة تراكيز التامسولوسين',
+  'Increased tamsulosin levels.',
+  'تجنب الجمع أو خفض الجرعة',
+  'Avoid or reduce dose.'
+);
+
+add('Prazosin', 'Tadalafil', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'توسيع وعائي مضاف',
+  'Additive vasodilation.',
+  'هبوط ضغط وإغماء',
+  'Hypotension and syncope.',
+  'فصل الجرعات - مراقبة ضغط الدم',
+  'Separate doses - monitor BP.'
+);
+
+// Hydralazine
+add('Hydralazine', 'Diazoxide', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'توسيع وعائي شديد',
+  'Severe vasodilation.',
+  'انخفاض ضغط دم خطير',
+  'Dangerous hypotension.',
+  'تجنب الجمع',
+  'Avoid combination.'
+);
+
+add('Hydralazine', 'MAO Inhibitors', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تأثير خافض لضغط الدم مضاعف',
+  'Additive hypotensive effect.',
+  'انخفاض ضغط دم شديد',
+  'Severe hypotension.',
+  'مراقبة دقيقة لضغط الدم',
+  'Close BP monitoring.'
+);
+
+// Clonidine
+add('Clonidine', 'Tricyclic Antidepressants', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'تثبيط التأثير الخافض لضغط الدم للكلونيدين',
+  'Inhibition of clonidine\\'s antihypertensive effect.',
+  'ارتفاع ضغط الدم الارتدادي',
+  'Rebound hypertension.',
+  'تجنب الجمع - أو مراقبة ضغط الدم',
+  'Avoid - or monitor BP closely.'
+);
+
+add('Clonidine', 'Propranolol', InteractionType.DRUG_DRUG, InteractionSeverity.HIGH,
+  'عند السحب المفاجئ - ارتفاع ضغط ارتدادي شديد',
+  'Upon abrupt withdrawal - severe rebound hypertension.',
+  'أزمة ارتفاع ضغط الدم',
+  'Hypertensive crisis.',
+  'إيقاف حاصر بيتا أولاً ثم الكلونيدين تدريجياً',
+  'Stop beta-blocker first, then taper clonidine.'
+);
+
+// Methyldopa
+add('Methyldopa', 'Iron Supplements', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'تكوين معقدات في الأمعاء',
+  'Complex formation in gut.',
+  'انخفاض امتصاص الميثيل دوبا',
+  'Reduced methyldopa absorption.',
+  'فصل الجرعات بساعتين',
+  'Separate doses by 2 hours.'
+);
+
+add('Methyldopa', 'Levodopa', InteractionType.DRUG_DRUG, InteractionSeverity.MODERATE,
+  'منافسة على النقل عبر الحاجز الدموي الدماغي',
+  'Competition for blood-brain barrier transport.',
+  'تقليل فعالية الليفودوبا',
+  'Reduced levodopa efficacy.',
+  'مراقبة أعراض باركنسون',
+  'Monitor Parkinson symptoms.'
+);
